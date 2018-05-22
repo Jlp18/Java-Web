@@ -25,5 +25,7 @@
     <servlet-name>loginout</servlet-name>
     <url-pattern>/loginout</url-pattern>
   </servlet-mapping>
-
+  <listener>
+    <listener-class>com.jsp.main.OnlineCountListener</listener-class>
+  </listener>
 </web-app>
