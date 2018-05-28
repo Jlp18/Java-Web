@@ -15,6 +15,15 @@
     <servlet-name>loginout</servlet-name>
     <servlet-class>com.jsp.main.loginout</servlet-class>
   </servlet>
+ 
+   <listener>
+    <listener-class>com.jsp.main.OnlineCountListener</listener-class>
+  </listener>
+   
+  <filter>
+    <filter-name>userfilter</filter-name>
+    <filter-class>com.jsp.main.userfilter</filter-class>
+  </filter>
 
 
   <servlet-mapping>
@@ -25,7 +34,9 @@
     <servlet-name>loginout</servlet-name>
     <url-pattern>/loginout</url-pattern>
   </servlet-mapping>
-  <listener>
-    <listener-class>com.jsp.main.OnlineCountListener</listener-class>
-  </listener>
+  
+  <filter-mapping>
+    <filter-name>userfilter</filter-name>
+    <url-pattern>/userfilter</url-pattern>
+  </filter-mapping>
 </web-app>
